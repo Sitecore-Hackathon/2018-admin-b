@@ -1,5 +1,7 @@
 ![Hackathon Logo](documentation/images/hackathon.png?raw=true "Hackathon Logo")
 
+Team admin-b is brought to you by Daniel Solovay, Erica Stockwell-Alpert, and Ed Schwehm, sponsored by Velir. 
+
 # Submission Boilerplate
 
 Welcome to Sitecore Hackathon 2018.
