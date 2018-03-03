@@ -10,7 +10,7 @@ The **admin/b** team took this as inspiration: can internet technology, and part
 
 ## Dependencies
 
-Before you can install SECRET MODULE X, you need to install the following items:
+Before you can install Civil Discourse Module, you need to install the following items:
 
 * Sitecore 9.0 rev. 171219 (Update-1) ([https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Update1.aspx](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Update1.aspx))
 
@@ -18,28 +18,42 @@ Before you can install SECRET MODULE X, you need to install the following items:
 
 1. Install Sitecore package: SECRET_MODULE_X-1.0.0.0.zip.
 2. Publish with subitems the following paths:
-	1. /sitecore/
+	1. /sitecore/templates/System/Settings
+    2. /sitecore/layout/Layouts/Project/Layouts
+    3. /sitecore/layout/Models/Project/CivilCommentsSection
+    4. /sitecore/layout/Renderings/Project/CivilCommentSectionController
+    5. /sitecore/content/Home/Global Components
+    6. /sitecore/content/Home/Settings
+    7. /sitecore/content/Home
 
-## Using SECRET MODULE X
+## Using Civil Discourse Module
 
-Here are the instructions for using SECRET MODULE X.
+1. Setup: Creating questionable words
+
+The Civil Discourse Module uses a repository of word items in Sitecore to scan each submitted comment for inappropriate language. These "questionable words" are stored in Sitecore, under /sitecore/content/Home/Global Components/Word Repository. Each word has the following fields:
+ 1. Word - text field. The word itself. This is case insensitive, and can also be a comma-separated list of similar words (e.g. "idiot, idiots"). 
+ 2. Severity Level - dropdown field, uses /sitecore/content/Home/Global Components/Severity Levels. This determines the color that the word is highlighted with; severe words show up in red, mild words show up in yellow, etc. You can add as many severity levels as you like, with any valid color ("green") or hex value ("#eeeeee) in the Warning Color field. 
+ 3. Custom Warning - text field. This field determines the message that is shown when the commenter hovers over the highlighted word, and should provide an explanation of why that word or phrase is discouraged.
+
+The Civil Discourse Module uses global settings items to set the settings on the component and to retrieve and store user comments. The component settings item is location at /sitecore/content/Home/Settings/Settings. This item has the following fields:
+ 1. Flagged Words - multilist field. Select words from the Word Repo that you want to be flagged.
+ 2. Flagged Word Groups - multilist field, /sitecore/content/Home/Global Components/Word Groupings. A word grouping provides an easy way to group Word items together and select them all at once. A Word Grouping item also has a field for Warning Text, which will be used as the default warning text for every word in the group (overridden by Custom Warning Text on the Word item). For example, a warning group might be "Swears" or "Insults", and a standard warning can be applied across all insult words. 
+ 3. Intro Text - rich text field. This field displays optional text at the top of the comments section. This can be a simple heading, a conversation prompt, etc. 
+ 
+The component has two parts, the comments list and the comment box. The comments are pulled from /sitecore/content/Home/Settings/Comments and displayed in date order, showing the username, the date posted, and the comment. 
+
+When a user submits a comment, the module scans the comment for questionable language. The Settings item is used to aggregate the Flagged Words and the Flagged Word Groups into a list of Word items (word, severity color, warning text). For each word in this list, we do a case-insensitive search of the commment using regex. If no flagged words are found, the comment is submitted; otherwise, the user is shown a review message which asks them to review their comment and consider removing or changing the highlighted words. The user can hover over each highlighted word to see a tooltip with the warning message. If the user clicks submit again without changing their comment, they will be prompted with a message asking if they're sure they want to submit; if they do edit their comment, the comment will be scanned again, and either submitted or returned with warnings again. In order to submit a comment that has flagged language, the user must go through the "are you sure" prompt. 
 
 ## Known Issues
 
-SECRET MODULE X 1.0 has several known issues. The notable issues are listed below; you can find the full list at [/issues](https://github.com/Sitecore-Hackathon/2018-admin-b/issues "issues"): 
-
-* Using SECRET MODULE X will enable you to be awesome in powerful ways.
+Civil Discourse Module has several known issues. The notable issues are listed below; you can find the full list at [/issues](https://github.com/Sitecore-Hackathon/2018-admin-b/issues "issues"): 
 
 ## Roadmap
 
-1. SECRET MODULE X 1.1
- 1. New awesome things
- 2. Maybe a bug fix
-1. SECRET MODULE X 1.2
- 1. Even more awesome things
- 2. There are no more bugs so nothing to fix here
-1. SECRET MODULE X 2.0
- 1. This will blow your mind in powerful ways. 
+1. Civil Discourse Module 1.1
+ 1. Use Datasource Item on rendering instead of Global Settings, so that different settings can be applied to different pages
+ 2. Implement the cooldown field, so that users must wait X seconds before resubmitting a comment after getting warnings
+
 
 ## Developer Bootstrap
 
