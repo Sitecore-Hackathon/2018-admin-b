@@ -20,7 +20,8 @@
         {
             identifier = Request.QueryString["identifier"];
         }
-        AdminB.Feature.CivilDiscourse.xConnect.ContactX.CreateNewContact(source, identifier);
+        var contacts = new AdminB.Feature.CivilDiscourse.xConnect.Contacts();
+        contacts.CreateNewContact(source, identifier);
 %>
     <h2>Contact created! Wubba lubba dub dub!</h2>
     <h4>Source: <%= source %></h4>

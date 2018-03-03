@@ -10,7 +10,7 @@
         <div>
             <h3>All Contact IDs</h3>
             <p>
-                <%= AdminB.Feature.CivilDiscourse.xConnect.ContactX.GetAllContacts() %>
+                <%= (new AdminB.Feature.CivilDiscourse.xConnect.Contacts()).GetAllContacts() %>
             </p>
         </div>
 </body>
