@@ -84,4 +84,4 @@ SECRET MODULE X was created by the [Velir](https://www.velir.com "Velir") [team 
 
 Team admin-b is brought to you by Daniel Solovay, Erica Stockwell-Alpert, and Ed Schwehm, sponsored by Velir.
 
-![Hackathon Logo](documentation/images/hackathon.png?raw=true "Hackathon Logo")
+![Hackathon Logo](documentation/images/Civil Discource Main.PNG?raw=true "Hackathon Logo")
