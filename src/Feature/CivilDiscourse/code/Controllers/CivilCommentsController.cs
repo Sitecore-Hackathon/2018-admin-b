@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
+using AdminB.Feature.CivilDiscourse.layouts;
 using AdminB.Feature.CivilDiscourse.Models;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
@@ -42,7 +42,16 @@ namespace AdminB.Feature.CivilDiscourse.Controllers
             Sitecore.Data.Fields.MultilistField flaggedWords = dataSource.Fields["Flagged Words"];
             Sitecore.Data.Fields.MultilistField wordGroups = dataSource.Fields["Flagged Word Groups"];
 
-            var cooldownTime = dataSource.Fields["Cooldown Minutes"].Value;
+            var cooldownTime = dataSource.Fields["Cooldown"].Value;
+
+            int cooldown = 5000;
+            if (!String.IsNullOrEmpty(cooldownTime))
+            {
+                if (int.TryParse(cooldownTime, out cooldown))
+                {
+                    model.Cooldown = cooldown;
+                }
+            }
 
             foreach (var wordItem in flaggedWords.GetItems())
             {
@@ -155,7 +164,6 @@ namespace AdminB.Feature.CivilDiscourse.Controllers
             return severityItem.Fields["Warning Color"].Value;
         }
     }
-
     public class Word
     {
         public string Value { get; set; }

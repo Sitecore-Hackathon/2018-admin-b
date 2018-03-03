@@ -142,7 +142,7 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Civil Comment Section\Content\Cooldown Minutes.item">
+    <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Civil Comment Section\Content\Cooldown.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>

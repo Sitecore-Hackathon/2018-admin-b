@@ -12,7 +12,33 @@
         {
             <script>
                 $("document").ready(function () {
-                    $(".input-comment").val("");
+                    $(".input-comment").val("");                   
+                });
+            </script>
+        }
+
+        if (!String.IsNullOrEmpty(Model.ReviewText) && !Model.PromptAreYouSure)
+        {
+            <script>
+                $("document").ready(function () {
+                    $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+                    $(".cooldown-counter").show();
+
+                    $("a.submit-button").addClass("disabled");
+
+                    var seconds = @(Model.Cooldown/1000);
+                    $("#cooldown-count").html(seconds);
+
+                    var timeleft = seconds;
+                    var downloadTimer = setInterval(function () {
+                        timeleft--;
+                        document.getElementById("cooldown-count").textContent = timeleft;
+                        if (timeleft <= 0) {
+                            clearInterval(downloadTimer);
+                            $(".cooldown-counter").hide();
+                            $("a.submit-button").removeClass("disabled");
+                        }
+                    }, 1000);
                 });
             </script>
         }
@@ -51,14 +77,17 @@
         using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
         {
             <div class="comment-box">
-                @Html.Sitecore().FormHandler("CivilComments", "SubmitComment") 
+                @Html.Sitecore().FormHandler("CivilComments", "SubmitComment")
                 @Html.TextAreaFor(m => m.Comment, new {@class = "input-comment", @cols = 180, @rows = 10})
+                <div class="cooldown-counter">Take some time to review your comment. You can submit again in <span id="cooldown-count"></span></div>
                 <a href="javascript:void(0);" class="submit-button">Submit</a>
-                @Html.TextBoxFor(m => m.PreviousComment, new { @class = "hidden previous-comment"})
-                @Html.TextBoxFor(m => m.TotalWarnings, new { @class = "hidden total-warnings" })
+                @Html.TextBoxFor(m => m.PreviousComment, new {@class = "hidden previous-comment"})
+                @Html.TextBoxFor(m => m.TotalWarnings, new {@class = "hidden total-warnings"})
                 @Html.TextBoxFor(m => m.SubmitShittyComment, new {@class = "hidden submit-shitty-comment"})
+                
                 <input type="submit" class="submit-btn-hidden hidden"/>
             </div>
+            
         }
 
         <div class="prev-comment-val hidden">@Model.PreviousComment</div>

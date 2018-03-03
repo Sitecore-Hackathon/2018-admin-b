@@ -32,6 +32,8 @@ namespace AdminB.Feature.CivilDiscourse.Models
 
         public string SubmitShittyComment { get; set; }
 
+        public int Cooldown { get; set; }
+
         public CivilCommentsSectionViewModel()
         {
             var dataSourceId = "{6BFAC490-3F0A-406F-88D6-5619CB008EBB}";    // global settings item
