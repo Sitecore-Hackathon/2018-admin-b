@@ -2,9 +2,9 @@
 version: 1
 id: {0706B14A-6D33-4004-A2D3-44CF89EE47C5}
 database: master
-path: /sitecore/templates/System/Settings/Feature/Civil Discource/Civil Comment Section/Content/Cooldown Minutes
+path: /sitecore/templates/System/Settings/Feature/Civil Discource/Civil Comment Section/Content/Cooldown
 parent: {CA22BE3F-147D-46F9-95A6-8120B6074841}
-name: Cooldown Minutes
+name: Cooldown
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -27,7 +27,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 542494d7-c8ba-4067-8666-e1547ca5b702
+revision: aff68f90-6363-4852-90d4-71cf42e3094b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-542494d7-c8ba-4067-8666-e1547ca5b702
+aff68f90-6363-4852-90d4-71cf42e3094b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20180303T021332Z
+20180303T213309Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
