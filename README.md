@@ -5,7 +5,8 @@
 
 The loss of Civil Discourse has been decried in a [wide](https://www.huffingtonpost.com/entry/the-importance-of-civil-discourse_us_59c5782be4b08d6615504261) [range](https://www.aacu.org/publications-research/periodicals/plea-civil-discourse-needed-academys-leadership) of [publications](https://www.wsj.com/articles/civil-discourse-in-decline-where-does-it-end-1496071276), and the [internet](http://www.latimes.com/opinion/readersreact/la-ol-le-civil-discourse-trump-internet-20170609-story.html) and [social media](https://www.technewsworld.com/story/85019.html) have been cited as a primary cause of this decline. 
 
-The **admin/b** team took this as inspiration: can internet technology, and particularly the Sitecore Experience Platform and xConnect, help lead us back to using communication to enhance understanding rather than enflame passions? Our Civil Disourse module does not seek to ban people or prevent communication; rather it engages users by reminding them of the potential negative and positive impact of the words.  When users comment using inflamatory or hurtful language, the module responds by recommendeing alternative phrasings that will have a more constructive impact. xConnect is used to persist users comments, and to track negative interactions, enabling a cool down mechanism to temporarily block submssions from users who are engaging in a high volume of potentially abusive interactions.
+The **admin/b** team took this as inspiration: can internet technology, and particularly the Sitecore Experience Platform and xConnect, help lead us back to using communication to enhance understanding rather than enflame passions? Our Civil Disourse module does not seek to ban people or prevent communication; rather it engages users by reminding them of the potential negative and positive impact of the words.  When users comment using inflamatory or hurtful language, the module responds by recommendeing alternative phrasings that will have a more constructive impact. xConnect is used to persist users comments, and to track negative interactions, enabling a 
+down mechanism to temporarily block submissions from users who are engaging in a high volume of potentially abusive interactions.
 
 
 ## Dependencies
@@ -44,6 +45,9 @@ The component has two parts, the comments list and the comment box. The comments
 
 When a user submits a comment, the module scans the comment for questionable language. The Settings item is used to aggregate the Flagged Words and the Flagged Word Groups into a list of Word items (word, severity color, warning text). For each word in this list, we do a case-insensitive search of the commment using regex. If no flagged words are found, the comment is submitted; otherwise, the user is shown a review message which asks them to review their comment and consider removing or changing the highlighted words. The user can hover over each highlighted word to see a tooltip with the warning message. If the user clicks submit again without changing their comment, they will be prompted with a message asking if they're sure they want to submit; if they do edit their comment, the comment will be scanned again, and either submitted or returned with warnings again. In order to submit a comment that has flagged language, the user must go through the "are you sure" prompt. 
 
+The optional cooldown field will disable the submit button for X seconds when a comment is returned with warnings. This prevents the user from submitting again immediately and encourages them to review and edit their comment. The cooldown can be as little as a few seconds, several minutes, or even hours, if the content editor is really sadistic. 
+
+
 ## Known Issues
 
 Civil Discourse Module has several known issues. The notable issues are listed below:
@@ -54,7 +58,8 @@ Civil Discourse Module has several known issues. The notable issues are listed b
 
 1. Civil Discourse Module 1.1
  1. Use Datasource Item on rendering instead of Global Settings, so that different settings can be applied to different pages
- 2. Implement the cooldown field, so that users must wait X seconds before resubmitting a comment after getting warnings
+ 2. Incremental cooldowns - multiple the cooldown time on subsequent comment submissions, so that a user keeps getting warnings every time they try to submit one comment, they have to wait longer each time to try submitting again. 
+ 3. Block bad users - Track the number of warnings on the comments that each user submits, and enact temporary bans on users who can't behave (there would be some threshold for number of warnings within a certain time period)
 
 
 ## Developer Bootstrap
