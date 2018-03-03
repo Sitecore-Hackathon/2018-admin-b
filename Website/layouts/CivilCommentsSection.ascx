@@ -46,9 +46,13 @@
     </form>
     <span class="error-message">You haven't typed anything!</span>
     <asp:PlaceHolder runat="server" ID="AreYouSure" Visible="false">
-        <div class="are-you-sure">
-            <span>It looks like you haven't made any changes. Are you sure you want to submit this comment?</span>
-            <asp:Button runat="server" Text="Yes, I'm Really Sure" OnClick="YesPleaseSubmitThisAwfulComment"></asp:Button>
+        <div class="overlay">
+            <div class="are-you-sure">
+                <a class="close-overlay close">X</a>
+                <span>It looks like you haven't made any changes. Are you sure you want to submit this comment?</span>
+                <asp:Button runat="server" Text="Yes, I'm Really Sure" OnClick="YesPleaseSubmitThisAwfulComment"></asp:Button>
+                <a class="close-overlay-btn close" href="javascript:void(0)">No, I'll revise it</a>
+            </div>
         </div>
     </asp:PlaceHolder>
     

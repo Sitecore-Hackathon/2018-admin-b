@@ -9,5 +9,9 @@
             $(".submit-btn-hidden").click();
         }
     });
+
+    $(".close").on("click", function() {
+        $(".overlay").hide();
+    }); 
 });
 
