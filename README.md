@@ -43,15 +43,15 @@ The Civil Discourse Module uses global settings items to set the settings on the
  
 The component has two parts, the comments list and the comment box. The comments are pulled from /sitecore/content/Home/Settings/Comments and displayed in date order, showing the username, the date posted, and the comment. 
 
-![Forum](documentation/images/Civil Discource Main.PNG?raw=true "Forum")
+![Forum](documentation/images/CivilDiscourceMain.PNG?raw=true "Forum")
 
 When a user submits a comment, the module scans the comment for questionable language. The Settings item is used to aggregate the Flagged Words and the Flagged Word Groups into a list of Word items (word, severity color, warning text). For each word in this list, we do a case-insensitive search of the commment using regex. If no flagged words are found, the comment is submitted; otherwise, the user is shown a review message which asks them to review their comment and consider removing or changing the highlighted words. The user can hover over each highlighted word to see a tooltip with the warning message. 
 
-![Review](documentation/images/Civil Discource Comment Review.PNG?raw=true "Review")
+![Review](documentation/images/CivilDiscourceCommentReview.PNG?raw=true "Review")
 
 If the user clicks submit again without changing their comment, they will be prompted with a message asking if they're sure they want to submit; if they do edit their comment, the comment will be scanned again, and either submitted or returned with warnings again. In order to submit a comment that has flagged language, the user must go through the "are you sure" prompt. 
 
-![Sure](documentation/images/Civil Discource Are You Sure.PNG?raw=true "Sure")
+![Sure](documentation/images/CivilDiscourceAreYouSure.PNG?raw=true "Sure")
 
 
 The optional cooldown field will disable the submit button for X seconds when a comment is returned with warnings. This prevents the user from submitting again immediately and encourages them to review and edit their comment. The cooldown can be as little as a few seconds, several minutes, or even hours, if the content editor is really sadistic. 
