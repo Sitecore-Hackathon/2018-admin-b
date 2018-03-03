@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminB.Feature.CivilDiscour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminB.Feature.CivilDiscourse.MVC", "src\Feature\CivilDiscourse\code\AdminB.Feature.CivilDiscourse.MVC.csproj", "{1342665C-197F-47FC-8281-1DFB3B29BBBA}"
 EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Feature.CivilDiscourse.Master", "src\Feature\CivilDiscourse\tds\Sitecore.Feature.CivilDiscourse.Master\Sitecore.Feature.CivilDiscourse.Master.scproj", "{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,12 @@ Global
 		{1342665C-197F-47FC-8281-1DFB3B29BBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1342665C-197F-47FC-8281-1DFB3B29BBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1342665C-197F-47FC-8281-1DFB3B29BBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +66,7 @@ Global
 		{42F67954-29DF-4A87-9C42-91CEC783A7BC} = {17DD5718-6E13-4F2C-9738-B410396D4552}
 		{A2C572A6-F1CF-48CD-9CC3-88BD8CEB390C} = {42F67954-29DF-4A87-9C42-91CEC783A7BC}
 		{1342665C-197F-47FC-8281-1DFB3B29BBBA} = {42F67954-29DF-4A87-9C42-91CEC783A7BC}
+		{F2F0D03E-9E6C-452D-92F7-1A70BAF8EF17} = {42F67954-29DF-4A87-9C42-91CEC783A7BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
