@@ -188,7 +188,7 @@ namespace Website.layouts
 
         public List<Word> GetWords(Item item, string warning = "")
         {
-            var values = item.Fields["Word"].Value.Split(',').Where(x => !String.IsNullOrEmpty(x));
+            var values = item.Fields["Word"].Value.Split(',').Where(x => !String.IsNullOrEmpty(x)).Select(x => x.Trim());
 
             return values.Select(val => new Word()
             {
