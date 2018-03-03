@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC04ECD3-7CE8-4CCA-926C-CCA83C8FB5C0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Website</RootNamespace>
+    <AssemblyName>Website</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Glass.Mapper.Sc.Core.4.5.0.4\lib\net45\Glass.Mapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc">
+      <HintPath>packages\Glass.Mapper.Sc.Core.4.5.0.4\lib\111\Glass.Mapper.Sc.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc.Mvc">
+      <HintPath>packages\Glass.Mapper.Sc.Core.4.5.0.4\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>bin\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>bin\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc, Version=1.0.4549.26863, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Mvc.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\GlassMapperSc.cs" />
+    <Compile Include="App_Start\GlassMapperScCustom.cs" />
+    <Compile Include="layouts\CivilCommentsSection.ascx.cs">
+      <DependentUpon>CivilCommentsSection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\CivilCommentsSection.ascx.designer.cs">
+      <DependentUpon>CivilCommentsSection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GlassModels.cs" />
+    <Compile Include="Models\ISitecoreItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="layouts\CivilCommentsSection.ascx" />
+    <Content Include="css\styles.css" />
+    <Content Include="scripts\commentbox.js" />
+    <Content Include="Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="App_Config\ConnectionStrings.config" />
+    <Content Include="App_Config\ConnectionStringsOracle.config" />
+    <Content Include="App_Config\Environment\Sitecore.PipelineProfiling.config" />
+    <Content Include="App_Config\FieldTypes.config" />
+    <Content Include="App_Config\Icons.config" />
+    <Content Include="App_Config\Include\Examples\CacheContainers.config.example" />
+    <Content Include="App_Config\Include\Examples\DataFolder.config.example" />
+    <Content Include="App_Config\Include\Examples\EventHandler.config.example" />
+    <Content Include="App_Config\Include\Examples\ForwardingSecurityEvents.config.example" />
+    <Content Include="App_Config\Include\Examples\ja-JP.config.example" />
+    <Content Include="App_Config\Include\Examples\LiveMode.config.example" />
+    <Content Include="App_Config\Include\Examples\ScalabilitySettings.config.example" />
+    <Content Include="App_Config\Include\Examples\serializationevents.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Buckets.WarmupQueries.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.BulkDataProvider.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.ContentSearch.Lucene.Indexes.Sharded.Core.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.ContentSearch.Lucene.Indexes.Sharded.Master.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.ContentSearch.Lucene.Indexes.Sharded.Web.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.ContentSearch.SolrCloud.SwitchOnRebuild.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.ContentSearch.VerboseLogging.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.ExperienceAnalytics.ReAggregation.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.ExperienceAnalytics.ReAggregation.Scheduling.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.HistoryEngine.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Owin.Authentication.Enabler.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Publishing.DedicatedInstance.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Publishing.EventQueueProvider.Async.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Publishing.Optimizations.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Publishing.Parallel.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Publishing.Recovery.config.example" />
+    <Content Include="App_Config\Include\Examples\Sitecore.Xdb.ReferenceData.ClientCache.config.example" />
+    <Content Include="App_Config\Include\Examples\SitecoreSettings.config.example" />
+    <Content Include="App_Config\Include\Examples\SiteDefinition.config.example" />
+    <Content Include="App_Config\Include\Examples\SwitchingManagers.config.example" />
+    <Content Include="App_Config\Include\Examples\WebDeploy.config.example" />
+    <Content Include="App_Config\Include\Examples\XslExtension.config.example" />
+    <Content Include="App_Config\Include\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
+    <Content Include="App_Config\Include\zzz\DataFolder.config" />
+    <Content Include="App_Config\Include\zzz\DisableXdb.config" />
+    <Content Include="App_Config\LanguageDefinitions.config" />
+    <Content Include="App_Config\Layers.config" />
+    <Content Include="App_Config\MimeTypes.config" />
+    <Content Include="App_Config\Portraits.config" />
+    <Content Include="App_Config\Prefetch\Common.config" />
+    <Content Include="App_Config\Prefetch\Core.config" />
+    <Content Include="App_Config\Prefetch\Master.config" />
+    <Content Include="App_Config\Prefetch\Webdb.config" />
+    <Content Include="App_Config\Prototypes.config" />
+    <Content Include="App_Config\Security\Domains.config" />
+    <Content Include="App_Config\Security\GlobalRoles.config" />
+    <Content Include="App_Config\Sitecore.config" />
+    <Content Include="App_Config\Sitecore.config.Oracle" />
+    <Content Include="App_Config\Sitecore\AntiCSRFModule\Sitecore.AntiCsrf.config" />
+    <Content Include="App_Config\Sitecore\Buckets\Sitecore.Buckets.config" />
+    <Content Include="App_Config\Sitecore\CampaignCreator\Sitecore.Marketing.Campaigns.Client.config" />
+    <Content Include="App_Config\Sitecore\CampaignCreator\Sitecore.Marketing.Campaigns.Services.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.Commands.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.Diagnostics.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.Interning.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.JSNLog.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.LanguageFallback.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.Media.RequestProtection.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.PipelineBased.ItemProvider.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.Processing.config" />
+    <Content Include="App_Config\Sitecore\CMS.Core\Sitecore.WebDAV.config" />
+    <Content Include="App_Config\Sitecore\Contact.Enrichment.Services.Client\Sitecore.Contact.Enrichment.Services.Client.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch.Azure\Sitecore.ContentSearch.Azure.DefaultIndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch.Azure\Sitecore.ContentSearch.Azure.Index.Core.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch.Azure\Sitecore.ContentSearch.Azure.Index.Core.ExcludeFields.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch.Azure\Sitecore.ContentSearch.Azure.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch.Azure\Sitecore.ContentSearch.Azure.Index.Master.ExcludeFields.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch.Azure\Sitecore.ContentSearch.Azure.Index.Web.config" />
+    <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
+    <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
+    <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
+    <None Include="App_Config\Sitecore\ContentSearch.Azure\Sitecore.ContentSearch.Azure.Index.Web.ExcludeFields.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.DefaultConfigurations.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Lucene.DefaultIndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Lucene.Index.Core.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Lucene.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Lucene.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Solr.DefaultIndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Solr.Index.Core.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Solr.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\ContentSearch\Sitecore.ContentSearch.Solr.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.ApplicationDependencies.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Azure.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Client.RulePerformance.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.ExperienceEditor.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Intelligence.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Lucene.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Mvc.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.PreemptiveScreenshot.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Processing.Aggregation.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Solr.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.Speak.Requests.config" />
+    <Content Include="App_Config\Sitecore\ContentTesting\Sitecore.ContentTesting.XConnect.Client.config" />
+    <Content Include="App_Config\Sitecore\DetectionServices.Location\Sitecore.CES.GeoIp.config" />
+    <Content Include="App_Config\Sitecore\DetectionServices.Location\Sitecore.CES.GeoIp.LegacyLocation.config" />
+    <Content Include="App_Config\Sitecore\DeviceDetection.Client\Sitecore.CES.DeviceDetection.CheckInitialization.config" />
+    <Content Include="App_Config\Sitecore\DeviceDetection.Client\Sitecore.CES.DeviceDetection.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EDS.Core.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EDS.Providers.CustomSMTP.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EDS.Providers.CustomSMTP.Sync.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EDS.Providers.SparkPost.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EDS.Providers.SparkPost.Sync.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EDS.SparkPost.Client.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ContentDelivery.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ContentManagement.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ContentManagementPrimary.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ContentSearch.Azure.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ContentSearch.Lucene.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ContentSearch.Solr.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.Core.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.DependencyEvaluator.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.EmailProcessing.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ExperienceAnalytics.Aggregation.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ExperienceAnalytics.Api.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ExperienceAnalytics.Client.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ExperienceAnalytics.Reduce.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.ExperienceProfile.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.MessageHandling.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.Messaging.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.Reporting.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.UI.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.EmailExperience.XConnect.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.ExM.Framework.config" />
+    <Content Include="App_Config\Sitecore\EmailExperience\Sitecore.ExM.Framework.ContentManagement.config" />
+    <Content Include="App_Config\Sitecore\Experience Editor\Sitecore.ExperienceEditor.config" />
+    <Content Include="App_Config\Sitecore\Experience Editor\Sitecore.ExperienceEditor.Speak.Requests.config" />
+    <Content Include="App_Config\Sitecore\ExperienceAnalytics\Sitecore.ExperienceAnalytics.Aggregation.config" />
+    <Content Include="App_Config\Sitecore\ExperienceAnalytics\Sitecore.ExperienceAnalytics.Client.config" />
+    <Content Include="App_Config\Sitecore\ExperienceAnalytics\Sitecore.ExperienceAnalytics.config" />
+    <Content Include="App_Config\Sitecore\ExperienceAnalytics\Sitecore.ExperienceAnalytics.Reduce.config" />
+    <Content Include="App_Config\Sitecore\ExperienceAnalytics\Sitecore.ExperienceAnalytics.StorageProviders.config" />
+    <Content Include="App_Config\Sitecore\ExperienceAnalytics\Sitecore.ExperienceAnalytics.WebAPI.config" />
+    <Content Include="App_Config\Sitecore\ExperienceContentManagement.Administration\Sitecore.ExperienceContentManagement.Administration.config" />
+    <Content Include="App_Config\Sitecore\ExperienceExplorer\Sitecore.ExperienceExplorer.config" />
+    <Content Include="App_Config\Sitecore\ExperienceExplorer\Sitecore.ExperienceExplorer.Services.config" />
+    <Content Include="App_Config\Sitecore\ExperienceExplorer\Sitecore.ExperienceExplorer.Speak.Requests.config" />
+    <Content Include="App_Config\Sitecore\ExperienceForms\Sitecore.ExperienceForms.Analytics.Aggregation.config" />
+    <Content Include="App_Config\Sitecore\ExperienceForms\Sitecore.ExperienceForms.Analytics.Tracking.config" />
+    <Content Include="App_Config\Sitecore\ExperienceForms\Sitecore.ExperienceForms.config" />
+    <Content Include="App_Config\Sitecore\ExperienceForms\Sitecore.ExperienceForms.Mvc.config" />
+    <Content Include="App_Config\Sitecore\ExperienceForms\Sitecore.ExperienceForms.Pipelines.Client.config" />
+    <Content Include="App_Config\Sitecore\ExperienceProfile\Sitecore.ExperienceProfile.Client.config" />
+    <Content Include="App_Config\Sitecore\ExperienceProfile\Sitecore.ExperienceProfile.config" />
+    <Content Include="App_Config\Sitecore\ExperienceProfile\Sitecore.ExperienceProfile.Reporting.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Azure.DomainsSearch.DefaultIndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Azure.DomainsSearch.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Azure.DomainsSearch.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Bundle.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Lucene.DomainsSearch.DefaultIndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Lucene.DomainsSearch.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Lucene.DomainsSearch.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Solr.DomainsSearch.DefaultIndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Solr.DomainsSearch.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Solr.DomainsSearch.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\FederatedExperienceManager\Sitecore.FXM.Speak.config" />
+    <Content Include="App_Config\Sitecore\ItemWebApi\Sitecore.ItemWebApi.config" />
+    <Content Include="App_Config\Sitecore\LaunchPad\Sitecore.Speak.LaunchPad.config" />
+    <Content Include="App_Config\Sitecore\ListManagement\Sitecore.ListManagement.Client.config" />
+    <Content Include="App_Config\Sitecore\ListManagement\Sitecore.ListManagement.config" />
+    <Content Include="App_Config\Sitecore\ListManagement\Sitecore.ListManagement.Services.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Azure.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Azure.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Azure.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Lucene.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Lucene.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Lucene.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Solr.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Solr.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.Repositories.Solr.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Assets\Sitecore.Marketing.Definitions.MarketingAssets.RepositoriesCD.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Automation.ActivityDescriptors.Client\Sitecore.Marketing.Automation.ActivityDescriptors.Client.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Automation.Client\Sitecore.Marketing.Automation.Client.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Client\Sitecore.Marketing.Client.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.Xdb.ReferenceData\Sitecore.Marketing.Operations.Xdb.ReferenceData.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.Xdb.ReferenceData\Sitecore.Marketing.Taxonomy.Xdb.ReferenceData.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Azure.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Azure.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Azure.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Lucene.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Lucene.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Lucene.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.ReferenceData.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Search.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Solr.Index.Master.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Solr.Index.Web.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Solr.IndexConfiguration.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.Taxonomy.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.Marketing.TaxonomyCD.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Operations.xMgmt\Sitecore.MarketingCD.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Segmentation.xMgmt\Sitecore.Marketing.Segmentation.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Channel\Sitecore.Analytics.Channel.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.Compatibility.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.ExcludeRobots.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.FieldTypes.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.Tracking.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.Tracking.Database.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.Tracking.Model.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.MarketingAutomation.Locators\Sitecore.Xdb.MarketingAutomation.Locators.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.MarketingAutomation.Operations\Sitecore.Xdb.MarketingAutomation.OperationsClient.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.MarketingAutomation.Reporting\Sitecore.Xdb.MarketingAutomation.ReportingClient.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.MarketingAutomation.Tracking\Sitecore.Xdb.MarketingAutomation.Tracking.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.ReferenceData.Client\Sitecore.Xdb.ReferenceData.Client.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.ReferenceData.Core\Sitecore.Xdb.ReferenceData.Core.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.ReferenceData.Service\Sitecore.Xdb.ReferenceData.Service.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.ReferenceData.SqlServer\Sitecore.Xdb.ReferenceData.SqlServer.config" />
+    <Content Include="App_Config\Sitecore\Marketing.Xdb.Sql.Common\Sitecore.Xdb.Sql.Common.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.Model.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.Processing.Aggregation.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.Processing.Aggregation.ProcessingPools.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.Processing.Aggregation.Services.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.Processing.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.Processing.Services.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Analytics.Reporting.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Xdb.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Xdb.Remote.Client.config" />
+    <Content Include="App_Config\Sitecore\Marketing.xDB\Sitecore.Xdb.Remote.Server.config" />
+    <Content Include="App_Config\Sitecore\Messaging\Sitecore.Messaging.Azure.config" />
+    <Content Include="App_Config\Sitecore\Messaging\Sitecore.Messaging.config" />
+    <Content Include="App_Config\Sitecore\Messaging\Sitecore.Messaging.SqlServer.config" />
+    <Content Include="App_Config\Sitecore\MVC.DeviceSimulator\Sitecore.MVC.DeviceSimulator.config" />
+    <Content Include="App_Config\Sitecore\MVC.ExperienceEditor\Sitecore.MVC.ExperienceEditor.config" />
+    <Content Include="App_Config\Sitecore\Mvc\Sitecore.Mvc.config" />
+    <Content Include="App_Config\Sitecore\Owin.Authentication\Sitecore.Owin.Authentication.config" />
+    <Content Include="App_Config\Sitecore\Owin\Sitecore.Owin.config" />
+    <Content Include="App_Config\Sitecore\PathAnalyzer\Sitecore.PathAnalyzer.Client.config" />
+    <Content Include="App_Config\Sitecore\PathAnalyzer\Sitecore.PathAnalyzer.config" />
+    <Content Include="App_Config\Sitecore\PathAnalyzer\Sitecore.PathAnalyzer.Processing.config" />
+    <Content Include="App_Config\Sitecore\PathAnalyzer\Sitecore.PathAnalyzer.RemoteClient.config" />
+    <Content Include="App_Config\Sitecore\PathAnalyzer\Sitecore.PathAnalyzer.Services.config" />
+    <Content Include="App_Config\Sitecore\PathAnalyzer\Sitecore.PathAnalyzer.Services.RemoteServer.config" />
+    <Content Include="App_Config\Sitecore\Services.Client\Sitecore.Content.Services.config" />
+    <Content Include="App_Config\Sitecore\Services.Client\Sitecore.Services.Client.config" />
+    <Content Include="App_Config\Sitecore\Speak.Applications\Sitecore.Speak.Applications.config" />
+    <Content Include="App_Config\Sitecore\SPEAK.Components\Sitecore.Speak.Components.AntiCsrf.config" />
+    <Content Include="App_Config\Sitecore\SPEAK.Components\Sitecore.Speak.Components.config" />
+    <Content Include="App_Config\Sitecore\SPEAK.Components\Sitecore.Speak.Components.Mvc.config" />
+    <Content Include="App_Config\Sitecore\Speak.Integration\Sitecore.Speak.Integration.Services.config" />
+    <Content Include="App_Config\Sitecore\Speak.Integration\Sitecore.Speak.Integration.Spa.config" />
+    <Content Include="App_Config\Sitecore\SPEAK\Sitecore.Speak.AntiCsrf.SheerUI.config" />
+    <Content Include="App_Config\Sitecore\SPEAK\Sitecore.Speak.config" />
+    <Content Include="App_Config\Sitecore\SPEAK\Sitecore.Speak.ContentSearch.Lucene.config" />
+    <Content Include="App_Config\Sitecore\SPEAK\Sitecore.Speak.ContentSearch.Solr.config" />
+    <Content Include="App_Config\Sitecore\SPEAK\Sitecore.Speak.ItemWebApi.config" />
+    <Content Include="App_Config\Sitecore\SPEAK\Sitecore.Speak.Mvc.config" />
+    <Content Include="App_Config\Sitecore\SPEAK\Sitecore.Speak.Pipelines.config" />
+    <Content Include="App_Config\Sitecore\Tracking.Web.MVC\Sitecore.MvcAnalytics.config" />
+    <Content Include="App_Config\Sitecore\Tracking.Web.RobotDetection\Sitecore.Analytics.Tracking.RobotDetection.config" />
+    <Content Include="App_Config\Sitecore\Update\Sitecore.Update.config" />
+    <Content Include="App_Config\Sitecore\XConnect.Client.Configuration\Sitecore.XConnect.Client.config" />
+    <Content Include="App_Config\XamlSharp.config" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56063</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56063/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
