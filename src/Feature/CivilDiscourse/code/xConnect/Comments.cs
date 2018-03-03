@@ -1,37 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
 
-namespace CivilDiscorse.TextAnalyzer.xConnect
+namespace AdminB.Feature.CivilDiscourse.xConnect
 {
+    /// <summary>
+    /// Provides APIs for interacting with comments via xConnect. 
+    /// </summary>
     public class Comments
     {
-        public void ExampleSync()
-        { //https://doc.sitecore.net/developers/xp/xconnect/xconnect-client-api/search/interactions/index.html#search-by-event-definition-id
+        /// <summary>
+        /// Submit the details of a new attempted or actual comment.
+        /// </summary>
+        /// <param name="contact">The xConnect contact making the comment.</param>
+        /// <param name="comment">The actual text of the comment</param>
+        /// <param name="warningCount">The number of warnings in the text that were shown to the user.</param>
+        /// <remarks></remarks>
+        public void SubmitComment(Contact contact, string comment, int warningCount)
+        {
+            // Create a custom event for the contact that has the comment text and the warning count
             using (Sitecore.XConnect.Client.XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
                 try
                 {
-                    var someGoalId = Guid.Parse("0565e9b0-936c-4594-8cc3-5fcace3918ed"); // Replace with real goal ID
 
-                    IAsyncQueryable<Sitecore.XConnect.Interaction> queryable = client.Interactions
-                        .Where(x => x.Events.Any(y => y.DefinitionId == someGoalId));
+                }
+                catch (XdbExecutionException ex)
+                {
+                    // Handle exception
+                }
+            }
+        }
 
-                    var enumerable = queryable.GetBatchEnumeratorSync(20);
-
-                    while (enumerable.MoveNext())
-                    {
-                        var interactionBatch = enumerable.Current; // Batch of <= 20 interactions
-
-                        foreach (var interaction in interactionBatch)
-                        {
-                            var matchingGoals = interaction.Events.OfType<Goal>().Where(x => x.DefinitionId == someGoalId).ToList();
-                        }
-                    }
+        /// <summary>
+        /// Get the warning words that are violated the most often on the site.
+        /// </summary>
+        public void GetMostViolatedWords()
+        {
+            // Create a custom event for the contact that has the comment text and the warning count
+            using (Sitecore.XConnect.Client.XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
+            {
+                try
+                {
 
                 }
                 catch (XdbExecutionException ex)

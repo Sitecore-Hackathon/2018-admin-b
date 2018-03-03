@@ -52,9 +52,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\code\AdminB.Feature.CivilDiscourse.MVC.csproj">
-      <Project>{1342665c-197f-47fc-8281-1dfb3b29bbba}</Project>
-      <Name>AdminB.Feature.CivilDiscourse.MVC</Name>
+    <ProjectReference Include="..\code\AdminB.Feature.CivilDiscourse.csproj">
+      <Project>{75435dc7-bda8-4ab5-9782-75542e714515}</Project>
+      <Name>AdminB.Feature.CivilDiscourse</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
