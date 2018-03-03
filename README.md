@@ -46,7 +46,9 @@ When a user submits a comment, the module scans the comment for questionable lan
 
 ## Known Issues
 
-Civil Discourse Module has several known issues. The notable issues are listed below; you can find the full list at [/issues](https://github.com/Sitecore-Hackathon/2018-admin-b/issues "issues"): 
+Civil Discourse Module has several known issues. The notable issues are listed below:
+
+1. When a Data Source is set on the Rendering, the component does not render, and does not show any helpful error messages. We have worked around this by using Global Settings, but this needs to be fixed so that unique settings can be applied to different pages.  
 
 ## Roadmap
 
