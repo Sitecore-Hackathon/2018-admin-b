@@ -1,4 +1,5 @@
-﻿@model Website.Models.CivilCommentsSectionViewModel
+﻿@model AdminB.Feature.CivilDiscourse.Models.CivilCommentsSectionViewModel
+
 @{
     if (Model != null)
     {
@@ -6,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../css/styles.css" />
         <script type="text/javascript" src="../scripts/commentbox.js"></script>
 
-        <div>@Model.IntroText</div>
+        <div>@Html.Raw(Model.IntroText)</div>
 
         <div class="comments-component">
             <div class="comments">
@@ -29,7 +30,7 @@
             </div>
         </div>
 
-        @if (Model.DisplayWarnings)
+        if (Model.DisplayWarnings)
         {
             <div class="review-box">
                 <h4 class="review-heading">We detected some language in your comment that is not conducive to a productive discussion. Please review your comment and consider changes the words and phrases we've highlighted. However over highlighted words for helpful tips and suggestions</h4>
@@ -37,15 +38,9 @@
             </div>
         }
 
-        <div class="comment-box">
-            <asp:TextBox runat="server" TextMode="MultiLine" ID="Comment" CssClass="comment-txt-box" Columns="50" Rows="10"></asp:TextBox>
-            <a href="javascript:void(0);" class="submit-button">Submit</a>
-            <asp:Button runat="server" ID="SubmitButton" OnClick="SubmitButton_Click" CssClass="submit-btn-hidden hidden"/>
-        </div>
-
-        @using (Html.BeginForm("SubmitComment", "CivilComments", FormMethod.Post))
+        using (Html.BeginForm("SubmitComment", "CivilComments", FormMethod.Post))
          {
-             @Html.TextAreaFor(m => m.Comment)
+             @Html.TextAreaFor(m => m.Comment, new { @class = "input-comment", @cols = 180, @rows = 10 })
              <a href="javascript:void(0);" class="submit-button">Submit</a>
              <input type="submit" class="submit-btn-hidden hidden"/>
              @Html.HiddenFor(m => m.PreviousComment)
@@ -53,7 +48,7 @@
         }
         <span class="error-message">You haven't typed anything!</span>
 
-        @if (Model.PromptAreYouSure)
+        if (Model.PromptAreYouSure)
         {
             <div class="overlay">
                 <div class="are-you-sure">

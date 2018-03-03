@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
+using AdminB.Feature.CivilDiscourse.layouts;
+using AdminB.Feature.CivilDiscourse.Models;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
-using Website.layouts;
 using Website.Models;
 
-namespace Website.Controllers
+namespace AdminB.Feature.CivilDiscourse.Controllers
 {
     public class CivilCommentsController : Controller
     {

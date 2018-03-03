@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Website.layouts {
+namespace AdminB.Feature.CivilDiscourse.layouts {
     
     
     public partial class CivilCommentsSection {

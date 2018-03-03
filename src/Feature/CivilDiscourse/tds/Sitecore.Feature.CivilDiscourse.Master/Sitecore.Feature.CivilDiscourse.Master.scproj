@@ -20,9 +20,6 @@
     <ManageRoles>False</ManageRoles>
     <SitecoreDatabase>master</SitecoreDatabase>
     <AssemblyStatus>Include</AssemblyStatus>
-    <SourceWebVirtualPath>/Website.csproj</SourceWebVirtualPath>
-    <SourceWebProject>{ac04ecd3-7ce8-4cca-926c-cca83c8fb5c0}|Website.csproj</SourceWebProject>
-    <SourceWebPhysicalPath>..\Website</SourceWebPhysicalPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,12 +46,24 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Website\Website.csproj">
-      <Project>{ac04ecd3-7ce8-4cca-926c-cca83c8fb5c0}</Project>
-      <Name>Website</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <SitecoreItem Include="sitecore\content.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Home.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Home\Settings.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Home\Settings\Comments.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Home\Settings\Settings.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
     <SitecoreItem Include="sitecore\layout.item">
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -63,7 +72,11 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Models\CivilCommentsSection.item">
+    <SitecoreItem Include="sitecore\layout\Models\Project.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Models\Project\CivilCommentsSection.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings.item">
@@ -74,7 +87,11 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Renderings\Modules\CivilCommentSection.item">
+    <SitecoreItem Include="sitecore\layout\Renderings\Project.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\Project\CivilCommentSection.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Sublayouts.item">
@@ -87,6 +104,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Sublayouts\Modules\Civil Comments Section.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates.item">
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
@@ -118,6 +136,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Civil Comment Section\__Standard Values\Comments.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Civil Comment Section\Content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -125,12 +144,15 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Civil Comment Section\Content\Cooldown Minutes.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Civil Comment Section\Content\Flagged Word Groups.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Civil Comment Section\Content\Flagged Words.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Comment.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -142,12 +164,15 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Comment\Content\Comment.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Comment\Content\Username.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Comments Folder.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Questionable Word.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -159,12 +184,15 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Questionable Word\Content\Custom Warning.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Questionable Word\Content\Severity Level.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Questionable Word\Content\Word.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Severity Level.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -176,6 +204,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Severity Level\Content\Warning Color.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Word Grouping.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -187,7 +216,26 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Settings\Feature\Civil Discource\Word Grouping\Content\Words.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <SourceWebProjects Include="{ac04ecd3-7ce8-4cca-926c-cca83c8fb5c0}|AdminB.Feature.CivilDiscourse.csproj">
+      <SourceWebPhysicalPath>..\Website</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/AdminB.Feature.CivilDiscourse.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>ac04ecd3-7ce8-4cca-926c-cca83c8fb5c0</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{ac04ecd3-7ce8-4cca-926c-cca83c8fb5c0}|Website.csproj">
+      <SourceWebPhysicalPath>..\Website</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/AdminB.Feature.CivilDiscourse.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>ac04ecd3-7ce8-4cca-926c-cca83c8fb5c0</SourceWebProjectId>
+    </SourceWebProjects>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Website\AdminB.Feature.CivilDiscourse.csproj">
+      <Project>{ac04ecd3-7ce8-4cca-926c-cca83c8fb5c0}</Project>
+      <Name>AdminB.Feature.CivilDiscourse</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>

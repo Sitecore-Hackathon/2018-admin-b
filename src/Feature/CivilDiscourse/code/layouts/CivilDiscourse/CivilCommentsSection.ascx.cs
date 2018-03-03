@@ -1,5 +1,4 @@
-﻿using Sitecore.Data.Items;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,12 +6,10 @@ using System.Text.RegularExpressions;
 using System.Web.UI.WebControls;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
-using Sitecore.Publishing;
-using Sitecore.Visualization;
-using Sitecore.Web.UI.XslControls;
+using Sitecore.Data.Items;
 using Literal = System.Web.UI.WebControls.Literal;
 
-namespace Website.layouts
+namespace AdminB.Feature.CivilDiscourse.layouts
 {
     public partial class CivilCommentsSection : System.Web.UI.UserControl
     {

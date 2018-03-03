@@ -5,7 +5,7 @@ using System.Web;
 using Sitecore.Data.Items;
 using Sitecore.Mvc.Presentation;
 
-namespace Website.Models
+namespace AdminB.Feature.CivilDiscourse.Models
 {
     public class CivilCommentsSectionViewModel
     {
@@ -29,12 +29,12 @@ namespace Website.Models
 
         public CivilCommentsSectionViewModel()
         {
-            var dataSourceId = RenderingContext.CurrentOrNull.Rendering.DataSource;
+            var dataSourceId = "{6BFAC490-3F0A-406F-88D6-5619CB008EBB}";    // global settings item
             var dataSource = Sitecore.Context.Database.GetItem(dataSourceId);
             DatasourceItem = dataSource;
             if (dataSource == null) return;
 
-            var commentsFolder = dataSource.Axes.GetDescendants().FirstOrDefault(x => x.TemplateName == "Comments Folder");
+            var commentsFolder = Sitecore.Context.Database.GetItem("{A0660FA6-D500-453A-A807-4FFE7997F83C}");
             if (commentsFolder == null) return;
             var comments =
                 commentsFolder.Axes.GetDescendants()
@@ -43,6 +43,9 @@ namespace Website.Models
 
             Comments = comments.ToList();
             IntroText = dataSource.Fields["Intro Text"].Value;
+
+            PromptAreYouSure = false;
+            DisplayWarnings = false;
         }
 
 

@@ -2,8 +2,8 @@
 version: 1
 id: {D9B7E214-73D5-4423-A016-2BD654BC1DE1}
 database: master
-path: /sitecore/layout/Renderings/Modules/CivilCommentSection
-parent: {F6F41DF7-80BE-4E31-9B8F-4C3772628EB1}
+path: /sitecore/layout/Renderings/Project/CivilCommentSection
+parent: {1995806F-0A84-42B5-93B0-88F0E2FF872C}
 name: CivilCommentSection
 master: {00000000-0000-0000-0000-000000000000}
 template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
@@ -21,9 +21,9 @@ content-length: 34
 field: {DDAB263E-B42E-419A-AA6F-081B7393CA38}
 name: Model
 key: model
-content-length: 44
+content-length: 52
 
-/sitecore/layout/Models/CivilCommentsSection
+/sitecore/layout/Models/Project/CivilCommentsSection
 ----field----
 field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
 name: Datasource Location
@@ -41,7 +41,7 @@ content-length: 81
 ----version----
 language: en
 version: 1
-revision: 6c753fc5-f523-4a20-a76e-8ca52d81ccb4
+revision: 99a8f62b-e370-4e35-aaeb-e48639dd4734
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -70,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6c753fc5-f523-4a20-a76e-8ca52d81ccb4
+99a8f62b-e370-4e35-aaeb-e48639dd4734
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20180303T031355Z
+20180303T161956Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

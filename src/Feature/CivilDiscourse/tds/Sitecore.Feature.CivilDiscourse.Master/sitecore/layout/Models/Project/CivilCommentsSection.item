@@ -1,40 +1,26 @@
 ----item----
 version: 1
-id: {4408785A-1A8E-484C-9D7B-83031783FE5D}
+id: {BBD55805-98C6-4BE4-A632-EAE3057C7FC8}
 database: master
-path: /sitecore/templates/System/Settings/Feature/Civil Discource/Questionable Word/Content/Severity Level
-parent: {3F2B783E-41C0-438E-9006-EF0B6C720D6C}
-name: Severity Level
+path: /sitecore/layout/Models/Project/CivilCommentsSection
+parent: {0CADFE65-0E55-424A-B396-45A7445694E2}
+name: CivilCommentsSection
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
-created: 20180303T013436Z
+template: {FED6A14F-0D05-4E18-B160-17C0588A2005}
+templatekey: Model
+created: 20180303T030058Z
 
 ----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 8
+field: {EE9E23D2-181D-4172-A929-0E0B8D10313C}
+name: Model Type
+key: model type
+content-length: 96
 
-Droplink
-----field----
-field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
-name: Source
-key: source
-content-length: 38
-
-{A4852949-0986-4045-9B57-14AAA3324239}
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-200
+AdminB.Feature.CivilDiscourse.Models.CivilCommentsSectionViewModel,AdminB.Feature.CivilDiscourse
 ----version----
 language: en
 version: 1
-revision: 1c97c6ac-8818-44a6-833b-de5d6bdecdfb
+revision: b1566b23-c2ba-4a1c-af4e-ed8b3f07f57c
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20180303T013436Z
+20180303T030058Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1c97c6ac-8818-44a6-833b-de5d6bdecdfb
+b1566b23-c2ba-4a1c-af4e-ed8b3f07f57c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20180303T074119Z
+20180303T162622Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,26 +1,19 @@
 ----item----
 version: 1
-id: {BBD55805-98C6-4BE4-A632-EAE3057C7FC8}
+id: {A0660FA6-D500-453A-A807-4FFE7997F83C}
 database: master
-path: /sitecore/layout/Models/CivilCommentsSection
-parent: {B87CD5F0-4E72-429D-90A3-B285F1D038CA}
-name: CivilCommentsSection
+path: /sitecore/content/Home/Settings/Comments
+parent: {2E3CD307-5787-4FDD-AC38-08F31340E94F}
+name: Comments
 master: {00000000-0000-0000-0000-000000000000}
-template: {FED6A14F-0D05-4E18-B160-17C0588A2005}
-templatekey: Model
-created: 20180303T030058Z
+template: {D1B91330-DEEF-4378-9D89-641A0B6FC017}
+templatekey: Comments Folder
+created: 20180303T033803Z
 
-----field----
-field: {EE9E23D2-181D-4172-A929-0E0B8D10313C}
-name: Model Type
-key: model type
-content-length: 49
-
-Website.Models.CivilCommentSection,Website.Models
 ----version----
 language: en
 version: 1
-revision: 791fbce9-eed8-468b-a54b-26709a32bef9
+revision: 6c5f16f6-b10c-47b6-8c14-b4011a72abfc
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,7 +28,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20180303T030058Z
+20180303T033803Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-791fbce9-eed8-468b-a54b-26709a32bef9
+6c5f16f6-b10c-47b6-8c14-b4011a72abfc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20180303T091909Z
+20180303T171409Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

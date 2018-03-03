@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CivilCommentsSection.ascx.cs" Inherits="Website.layouts.CivilCommentsSection" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CivilCommentsSection.ascx.cs" Inherits="AdminB.Feature.CivilDiscourse.layouts.CivilCommentsSection" %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/styles.css" />
@@ -61,3 +61,4 @@
         <asp:Literal runat="server" ID="TotalWarnings"></asp:Literal>
     </div>
 </div>
+
