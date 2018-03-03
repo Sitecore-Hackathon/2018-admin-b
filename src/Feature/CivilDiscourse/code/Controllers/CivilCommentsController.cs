@@ -9,21 +9,30 @@ using AdminB.Feature.CivilDiscourse.Models;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
-using Website.Models;
 
 namespace AdminB.Feature.CivilDiscourse.Controllers
 {
     public class CivilCommentsController : Controller
     {
+        public ActionResult Index()
+        {
+            var model = new CivilCommentsSectionViewModel();
+            return View("/Views/CivilCommentsSection.cshtml", model);
+        }
+
         // GET: Default
         public ActionResult SubmitComment(CivilCommentsSectionViewModel model)
         {
-            if (model.Comment == model.PreviousComment)
+            model.ClearTextbox = false;
+            if (model.SubmitShittyComment == "true")
             {
-                model.PromptAreYouSure = true;
-                model.DisplayWarnings = true;
-                return View("/Views/CivilCommentsSection.cshtml", model);
+                CreateComment(model);
+                return View("/Views/CivilCommentsSection.cshtml", new CivilCommentsSectionViewModel()
+                {
+                    ClearTextbox = true
+                });
             }
+                       
             model.PromptAreYouSure = false;
 
             var comment = model.Comment;
@@ -65,8 +74,17 @@ namespace AdminB.Feature.CivilDiscourse.Controllers
 
             model.ReviewText = comment;
 
+            if (model.Comment == model.PreviousComment)
+            {
+                model.PromptAreYouSure = true;
+                model.DisplayWarnings = true;
+                model.PreviousComment = model.Comment;
+                return View("/Views/CivilCommentsSection.cshtml", model);
+            }
+
             if (warnings > 0)
             {
+                model.DisplayWarnings = true;
                 model.PreviousComment = model.Comment;
                 model.TotalWarnings += warnings;
                 return View("/Views/CivilCommentsSection.cshtml", model);
@@ -74,39 +92,47 @@ namespace AdminB.Feature.CivilDiscourse.Controllers
             else
             {
                 CreateComment(model);
-                return View("/Views/CivilCommentsSection.cshtml", new CivilCommentsSectionViewModel());
+                return View("/Views/CivilCommentsSection.cshtml", new CivilCommentsSectionViewModel()
+                {
+                    ClearTextbox = true
+                });
             }
         }
 
         public void CreateComment(CivilCommentsSectionViewModel model)
         {
-            Database masterDb = Sitecore.Configuration.Factory.GetDatabase("master");
-            var dataSource = model.DatasourceItem;
-            dataSource = masterDb.GetItem(dataSource.ID);
-            var commentsFolder = dataSource.Axes.GetDescendants().FirstOrDefault(x => x.TemplateName == "Comments Folder");
-            if (commentsFolder == null) return;
-            TemplateItem template = masterDb.GetTemplate("{F0A8C4E9-FEE1-407E-99DB-A7F2D16024D1}");
-            var newComment = commentsFolder.Add(String.Format("Comment {0}", DateTime.Now.ToString("g")).SanitizeToItemName(), template);
+            using (new Sitecore.SecurityModel.SecurityDisabler())
+            {
+                Database masterDb = Sitecore.Configuration.Factory.GetDatabase("master");
+                var dataSource = model.DatasourceItem;
+                dataSource = masterDb.GetItem(dataSource.ID);
+                var commentsFolder = masterDb.GetItem("{A0660FA6-D500-453A-A807-4FFE7997F83C}");
+                if (commentsFolder == null) return;
+                TemplateItem template = masterDb.GetTemplate("{F0A8C4E9-FEE1-407E-99DB-A7F2D16024D1}");
+                var newComment =
+                    commentsFolder.Add(String.Format("Comment {0}", DateTime.Now.ToString("g")).SanitizeToItemName(),
+                        template);
 
-            var user = Sitecore.Context.User;
-            var username = user == null ? "anon" : user.Name;
+                var user = Sitecore.Context.User;
+                var username = user == null ? "anon" : user.Name;
 
-            if (newComment == null) return;
-            newComment.Editing.BeginEdit();
-            newComment.Fields["Comment"].Value = model.Comment;
-            newComment.Fields["Username"].Value = username;
-            newComment.Editing.EndEdit();
+                if (newComment == null) return;
+                newComment.Editing.BeginEdit();
+                newComment.Fields["Comment"].Value = model.Comment;
+                newComment.Fields["Username"].Value = username;
+                newComment.Editing.EndEdit();
 
-            Sitecore.Publishing.PublishOptions publishOptions =
-            new Sitecore.Publishing.PublishOptions(newComment.Database,
-                                           Database.GetDatabase("web"),
-                                           Sitecore.Publishing.PublishMode.SingleItem,
-                                           newComment.Language,
-                                           System.DateTime.Now);  // Create a publisher with the publishoptions
-            Sitecore.Publishing.Publisher publisher = new Sitecore.Publishing.Publisher(publishOptions);
+                Sitecore.Publishing.PublishOptions publishOptions =
+                    new Sitecore.Publishing.PublishOptions(newComment.Database,
+                        Database.GetDatabase("web"),
+                        Sitecore.Publishing.PublishMode.SingleItem,
+                        newComment.Language,
+                        System.DateTime.Now); // Create a publisher with the publishoptions
+                Sitecore.Publishing.Publisher publisher = new Sitecore.Publishing.Publisher(publishOptions);
 
-            publisher.Options.RootItem = newComment;
-            publisher.Publish();
+                publisher.Options.RootItem = newComment;
+                publisher.Publish();
+            }
         }
 
         public List<Word> GetWords(Item item, string warning = "")

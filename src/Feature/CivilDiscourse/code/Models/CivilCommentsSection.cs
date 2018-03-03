@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http.ModelBinding;
 using Sitecore.Data.Items;
 using Sitecore.Mvc.Presentation;
 
@@ -27,6 +28,10 @@ namespace AdminB.Feature.CivilDiscourse.Models
 
         public int TotalWarnings { get; set; }
 
+        public bool ClearTextbox { get; set; }
+
+        public string SubmitShittyComment { get; set; }
+
         public CivilCommentsSectionViewModel()
         {
             var dataSourceId = "{6BFAC490-3F0A-406F-88D6-5619CB008EBB}";    // global settings item
@@ -43,9 +48,6 @@ namespace AdminB.Feature.CivilDiscourse.Models
 
             Comments = comments.ToList();
             IntroText = dataSource.Fields["Intro Text"].Value;
-
-            PromptAreYouSure = false;
-            DisplayWarnings = false;
         }
 
 
