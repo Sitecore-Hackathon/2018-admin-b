@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {3F2B783E-41C0-438E-9006-EF0B6C720D6C}
+database: master
+path: /sitecore/templates/System/Settings/Feature/Civil Discource/Questionable Word/Content
+parent: {5AF71CE4-8556-4EA0-9293-6317CC3F1AFC}
+name: Content
+master: {00000000-0000-0000-0000-000000000000}
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20180303T013436Z
+
+----version----
+language: en
+version: 1
+revision: f5ab3624-6e9f-4d6c-9dab-7ead9a3eb225
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 25
+
+sitecore\estockwellalpert
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20180303T013436Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 25
+
+sitecore\estockwellalpert
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+f5ab3624-6e9f-4d6c-9dab-7ead9a3eb225
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20180303T014117Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 25
+
+sitecore\estockwellalpert
