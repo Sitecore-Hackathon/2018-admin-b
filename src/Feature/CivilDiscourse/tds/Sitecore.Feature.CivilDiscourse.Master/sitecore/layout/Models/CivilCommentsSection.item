@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {BBD55805-98C6-4BE4-A632-EAE3057C7FC8}
+database: master
+path: /sitecore/layout/Models/CivilCommentsSection
+parent: {B87CD5F0-4E72-429D-90A3-B285F1D038CA}
+name: CivilCommentsSection
+master: {00000000-0000-0000-0000-000000000000}
+template: {FED6A14F-0D05-4E18-B160-17C0588A2005}
+templatekey: Model
+created: 20180303T030058Z
+
+----field----
+field: {EE9E23D2-181D-4172-A929-0E0B8D10313C}
+name: Model Type
+key: model type
+content-length: 49
+
+Website.Models.CivilCommentSection,Website.Models
+----version----
+language: en
+version: 1
+revision: 791fbce9-eed8-468b-a54b-26709a32bef9
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 25
+
+sitecore\estockwellalpert
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20180303T030058Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 25
+
+sitecore\estockwellalpert
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+791fbce9-eed8-468b-a54b-26709a32bef9
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20180303T091909Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 25
+
+sitecore\estockwellalpert
