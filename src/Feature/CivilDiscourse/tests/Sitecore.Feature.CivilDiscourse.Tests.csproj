@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CivilDiscorse.TextAnalyzer.Tests</RootNamespace>
     <AssemblyName>CivilDiscorse.TextAnalyzer.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,8 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\code\Sitecore.Feature.CivilDiscourse.csproj">
-      <Project>{5C6455A5-420A-4392-AE70-4959E93A9011}</Project>
-      <Name>CivilDiscorse.TextAnalyzer</Name>
+      <Project>{5c6455a5-420a-4392-ae70-4959e93a9011}</Project>
+      <Name>Sitecore.Feature.CivilDiscourse</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
