@@ -79,7 +79,7 @@ Want to develop for Civil Discourse Module? Great! To get started developing for
 
 ## About the Authors
 
-Civil Discource Module was created by the [Velir](https://www.velir.com "Velir") [team admin/b](https://github.com/Sitecore-Hackathon/2018-admin-b/wiki/Team-admin-b "admin/b") (Dan Solovay, Nicole Durand, Ed Schwehm) as part of [2017 Sitecore Hackathon](http://www.sitecorehackathon.org/sitecore-hackathon-2018/ "Sitecore Hackathon 2018").
+Civil Discource Module was created by the [Velir](https://www.velir.com "Velir") [team admin/b](https://github.com/Sitecore-Hackathon/2018-admin-b/wiki/Team-admin-b "admin/b") (Dan Solovay, Ed Schwehm, Erica Stockwell-Alpert) as part of [2017 Sitecore Hackathon](http://www.sitecorehackathon.org/sitecore-hackathon-2018/ "Sitecore Hackathon 2018").
 
 
 Team admin-b is brought to you by Daniel Solovay, Erica Stockwell-Alpert, and Ed Schwehm, sponsored by Velir.
