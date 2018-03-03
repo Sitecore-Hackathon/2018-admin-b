@@ -13,6 +13,15 @@ namespace Website.layouts {
     public partial class CivilCommentsSection {
         
         /// <summary>
+        /// IntroText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal IntroText;
+        
+        /// <summary>
         /// CommentsRepeater control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Website.layouts {
         protected global::System.Web.UI.WebControls.PlaceHolder ReviewCommentBox;
         
         /// <summary>
+        /// ReviewCommentText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ReviewCommentText;
+        
+        /// <summary>
         /// Comment control.
         /// </summary>
         /// <remarks>
@@ -47,5 +65,32 @@ namespace Website.layouts {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SubmitButton;
+        
+        /// <summary>
+        /// AreYouSure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder AreYouSure;
+        
+        /// <summary>
+        /// PreviousComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal PreviousComment;
+        
+        /// <summary>
+        /// TotalWarnings control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal TotalWarnings;
     }
 }

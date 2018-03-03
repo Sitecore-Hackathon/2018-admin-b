@@ -6,3 +6,128 @@
     display:none;
     color:red;
 }
+
+body {
+    padding: 49px 200px 0;
+}
+
+.comment-box {
+    margin-top: 40px;
+}
+
+.comment-txt-box {
+    width: 100%;
+}
+
+a.submit-button {
+    background: #eeeeee;
+    padding: 10px 0;
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+
+.review-box {
+    margin-top: 20px;
+    border: 2px solid red;
+    padding: 5px;
+    position: relative;
+}
+
+span.tool-tip {
+    position: absolute;
+    z-index: 1000;
+    top: -25px;
+    left: 0;
+    display: block;
+    background: #eee;
+    display: none;
+    font-weight: normal;
+    width: max-content;
+    padding: 5px;
+}
+
+.warning-word:hover .tool-tip {
+    display: block;
+}
+
+span.warning-word {
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.are-you-sure span {
+    width: 100%;
+    display: block;
+}
+
+.are-you-sure input {
+    background: #eee;
+    border: none;
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.are-you-sure span {
+    width: 100%;
+    display: block;
+}
+
+.are-you-sure input {
+    background: #eee;
+    border: none;
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.are-you-sure {
+    text-align: center;
+    z-index: 1000;
+    position: absolute;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 700px;
+    bottom: -66px;
+    padding: 50px 40px;
+    left: 20%;
+}
+
+.comments-component {
+    position: relative;
+}
+
+.username {
+    display: inline-block;
+    width: 50%;
+    font-weight: bold;
+}
+
+.date {
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+}
+
+.comment {
+    background: #eee;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.comment .body {
+    margin: 5px 0 0 0px;
+}

@@ -3,7 +3,8 @@
         var comment = $(".comment-txt-box").val();
         if (comment == "") {
             $(".error-message").show();
-        } else {
+        }
+        else {
             $(".error-message").hide();
             $(".submit-btn-hidden").click();
         }
