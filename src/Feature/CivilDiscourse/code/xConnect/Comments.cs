@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
 
-namespace CivilDiscorse.TextAnalyzer.xConnect
+namespace AdminB.Feature.CivilDiscourse.xConnect
 {
     public class Comments
     {
