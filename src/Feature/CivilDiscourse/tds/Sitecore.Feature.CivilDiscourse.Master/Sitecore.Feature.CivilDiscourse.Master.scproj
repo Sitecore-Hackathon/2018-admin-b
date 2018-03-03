@@ -91,7 +91,7 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Renderings\Project\CivilCommentSection.item">
+    <SitecoreItem Include="sitecore\layout\Renderings\Project\CivilCommentSectionController.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Sublayouts.item">

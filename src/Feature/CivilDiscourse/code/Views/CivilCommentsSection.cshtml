@@ -3,9 +3,19 @@
 @{
     if (Model != null)
     {
+       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/styles.css" />
         <script type="text/javascript" src="../scripts/commentbox.js"></script>
+
+        if (Model.ClearTextbox)
+        {
+            <script>
+                $("document").ready(function () {
+                    $(".input-comment").val("");
+                });
+            </script>
+        }
 
         <div>@Html.Raw(Model.IntroText)</div>
 
@@ -33,19 +43,27 @@
         if (Model.DisplayWarnings)
         {
             <div class="review-box">
-                <h4 class="review-heading">We detected some language in your comment that is not conducive to a productive discussion. Please review your comment and consider changes the words and phrases we've highlighted. However over highlighted words for helpful tips and suggestions</h4>
-                @Model.ReviewText
+                <h4 class="review-heading">We detected some language in your comment that is not conducive to a productive discussion. Please review your comment and consider changes the words and phrases we've highlighted. Hover over highlighted words for helpful tips and suggestions</h4>
+                @Html.Raw(Model.ReviewText)
             </div>
         }
 
-        using (Html.BeginForm("SubmitComment", "CivilComments", FormMethod.Post))
-         {
-             @Html.TextAreaFor(m => m.Comment, new { @class = "input-comment", @cols = 180, @rows = 10 })
-             <a href="javascript:void(0);" class="submit-button">Submit</a>
-             <input type="submit" class="submit-btn-hidden hidden"/>
-             @Html.HiddenFor(m => m.PreviousComment)
-             @Html.HiddenFor(m => m.TotalWarnings)
+        using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+        {
+            <div class="comment-box">
+                @Html.Sitecore().FormHandler("CivilComments", "SubmitComment") 
+                @Html.TextAreaFor(m => m.Comment, new {@class = "input-comment", @cols = 180, @rows = 10})
+                <a href="javascript:void(0);" class="submit-button">Submit</a>
+                @Html.TextBoxFor(m => m.PreviousComment, new { @class = "hidden previous-comment"})
+                @Html.TextBoxFor(m => m.TotalWarnings, new { @class = "hidden total-warnings" })
+                @Html.TextBoxFor(m => m.SubmitShittyComment, new {@class = "hidden submit-shitty-comment"})
+                <input type="submit" class="submit-btn-hidden hidden"/>
+            </div>
         }
+
+        <div class="prev-comment-val hidden">@Model.PreviousComment</div>
+        <div class="total-warnings-val hidden">@Model.TotalWarnings</div>
+
         <span class="error-message">You haven't typed anything!</span>
 
         if (Model.PromptAreYouSure)
@@ -54,7 +72,7 @@
                 <div class="are-you-sure">
                     <a class="close-overlay close">X</a>
                     <span>It looks like you haven't made any changes. Are you sure you want to submit this comment?</span>
-                    <asp:Button runat="server" Text="Yes, I'm Really Sure" OnClick="YesPleaseSubmitThisAwfulComment"></asp:Button>
+                    <a class="submit-override" href="javascript:void(0)">Yes, I'm Really Sure</a>
                     <a class="close-overlay-btn close" href="javascript:void(0)">No, I'll revise it</a>
                 </div>
             </div>
