@@ -3,7 +3,7 @@
 > Civil discourse is engagement in discourse (conversation) intended to enhance understanding.  
 [Wikidedia](https://en.wikipedia.org/w/index.php?title=Civil_discourse&oldid=815158998)
 
-The loss of Civil Discourse has been decried in a wide range of Media publications, and the rise of the internet and social media has been often sited as a primarly cause of this decline. The **admin/b** team took this as inspiration: can internet 
+The loss of Civil Discourse has been decried in a [wide]https://www.huffingtonpost.com/entry/the-importance-of-civil-discourse_us_59c5782be4b08d6615504261) (range)[https://www.aacu.org/publications-research/periodicals/plea-civil-discourse-needed-academys-leadership] (of)[https://www.wsj.com/articles/civil-discourse-in-decline-where-does-it-end-1496071276] (publications)[], and the rise of the (internet)[http://www.latimes.com/opinion/readersreact/la-ol-le-civil-discourse-trump-internet-20170609-story.html] and social media has been often sited as a primarly cause of this decline. The **admin/b** team took this as inspiration: can internet 
 
 
 ## Dependencies
