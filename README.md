@@ -1,6 +1,10 @@
-# SECRET MODULE X
+# Civil Discourse module
 
-The SECRET MODULE X for Sitecore is awesome in powerful ways.
+> Civil discourse is engagement in discourse (conversation) intended to enhance understanding.  
+[Wikidedia](https://en.wikipedia.org/w/index.php?title=Civil_discourse&oldid=815158998)
+
+The loss of Civil Discourse has been decried in a wide range of Media publications, and the rise of the internet and social media has been often sited as a primarly cause of this decline. The **admin/b** team took this as inspiration: can internet 
+
 
 ## Dependencies
 
