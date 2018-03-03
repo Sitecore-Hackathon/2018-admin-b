@@ -48,12 +48,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\code\Sitecore.Feature.CivilDiscourse.csproj">
-      <Project>{5c6455a5-420a-4392-ae70-4959e93a9011}</Project>
-      <Name>Sitecore.Feature.CivilDiscourse</Name>
+    <ProjectReference Include="..\code\AdminB.Feature.CivilDiscourse.MVC.csproj">
+      <Project>{1342665c-197f-47fc-8281-1dfb3b29bbba}</Project>
+      <Name>AdminB.Feature.CivilDiscourse.MVC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
