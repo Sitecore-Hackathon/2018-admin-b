@@ -76,6 +76,5 @@ namespace CivilDiscorse.TextAnalyzer.xConnect
                 }
             }
         }
-        }
     }
 }
