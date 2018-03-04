@@ -1,4 +1,5 @@
-# Civil Discourse module
+# Civil Discourse module 
+(xConnect category)
 
 > Civil discourse is engagement in discourse (conversation) intended to enhance understanding.  
 [Wikidedia](https://en.wikipedia.org/w/index.php?title=Civil_discourse&oldid=815158998)
