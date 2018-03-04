@@ -1,5 +1,4 @@
-# Civil Discourse module 
-(xConnect category)
+# Civil Discourse module
 
 > Civil discourse is engagement in discourse (conversation) intended to enhance understanding.  
 [Wikidedia](https://en.wikipedia.org/w/index.php?title=Civil_discourse&oldid=815158998)
@@ -91,3 +90,5 @@ Team admin-b is brought to you by Daniel Solovay, Erica Stockwell-Alpert, and Ed
 ## Video 
 
 https://youtu.be/-W2qUEDpxxs
+
+![powerful ways](https://i.imgur.com/hSLXsUQ.gif "Powerful Ways")
