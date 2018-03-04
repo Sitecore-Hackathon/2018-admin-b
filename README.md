@@ -17,7 +17,7 @@ Before you can install Civil Discourse Module, you need to install the following
 
 ## Installation
 
-1. Install Sitecore package: SECRET_MODULE_X-1.0.0.0.zip.
+1. Install Sitecore package: CivilDiscourse-1.0.0.0.zip from the releases page: https://github.com/Sitecore-Hackathon/2018-admin-b/releases/tag/1.0.
 2. Publish with subitems the following paths:
 	1. /sitecore/templates/System/Settings
     2. /sitecore/layout/Layouts/Project/Layouts
@@ -73,7 +73,7 @@ Civil Discourse Module has several known issues. The notable issues are listed b
 
 ## Developer Bootstrap
 
-Want to develop for Civil Discourse Module? Great! To get started developing for SECRET MODULE X, you must first do some things:
+Want to develop for Civil Discourse Module? Great! To get started developing for CivilDiscourse, you must first do some things:
 
 * Be awesome in powerful ways!
 
