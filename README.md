@@ -85,3 +85,8 @@ Civil Discource Module was created by the [Velir](https://www.velir.com "Velir")
 Team admin-b is brought to you by Daniel Solovay, Erica Stockwell-Alpert, and Ed Schwehm, sponsored by Velir.
 
 ![Hackathon Logo](documentation/images/hackathon.png?raw=true "Hackathon Logo")
+
+----
+## Video 
+
+https://youtu.be/-W2qUEDpxxs
