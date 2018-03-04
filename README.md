@@ -61,6 +61,7 @@ The optional cooldown field will disable the submit button for X seconds when a 
 
 Civil Discourse Module has several known issues. The notable issues are listed below:
 
+1. xConnect part doesn't yet work. Whoops. No reporting.
 1. When a Data Source is set on the Rendering, the component does not render, and does not show any helpful error messages. We have worked around this by using Global Settings, but this needs to be fixed so that unique settings can be applied to different pages.  
 
 ## Roadmap
