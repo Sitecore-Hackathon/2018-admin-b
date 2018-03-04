@@ -1,0 +1,59 @@
+﻿@using AdminB.Feature.CivilDiscourse.Models
+@{
+    Layout = null;
+
+    List<UserData> userReport = new List<UserData>()
+    {
+        new UserData()
+        {
+            NumberOfWarnings = 12,
+            NumberOfComments = 200,
+            Username = "edschwehm"
+        },
+        new UserData()
+        {
+            NumberOfComments = 500,
+            NumberOfWarnings = 0,
+            Username = "estockwellalpert"
+        },
+        new UserData()
+        {
+            NumberOfWarnings = 712,
+            NumberOfComments = 2,
+            Username = "dansolovay"
+        }
+    };
+
+    userReport = userReport.OrderByDescending(x => (x.NumberOfWarnings*100.0/x.NumberOfComments)).ToList();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title></title>
+</head>
+<body>
+<div>
+    <h1>User Report</h1>
+
+    @foreach (var user in userReport)
+    {
+        <div class="user" style="margin-bottom: 10px">
+            <span><b>User: </b>@user.Username</span><br/>
+            <span><b>Number of Comments: </b> @user.NumberOfComments</span><br/>
+            <span style="@(user.NumberOfWarnings*100.0/user.NumberOfComments > .05 ? "color: red" : "")"><b>Warnings: </b> @user.WarningsPerComment()%</span>
+        </div>
+    }
+</div>
+</body>
+</html>
+
+<style>
+    .user {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+}
+</style>
